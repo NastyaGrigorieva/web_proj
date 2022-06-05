@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const getMovies = async (params) => {
+export const getMovies = async (params) => {
     const { data } = await axios.get('/discover/movie', { params }) || {};
     return data;
 }
 
-const getMoviesBySearchValue = async (params) => {
+export const getMoviesBySearchValue = async (params) => {
     const { data } = await axios.get(`/search/movie${params}`) || {};
     return data;
 }

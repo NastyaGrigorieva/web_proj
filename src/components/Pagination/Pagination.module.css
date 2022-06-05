@@ -1,0 +1,67 @@
+.wrapper {
+    margin: 0 auto;
+}
+
+.wrapper > div > span {
+    margin: 0 12px;
+    font-size: 17px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    max-width: 100px;
+    border-radius: 7px;
+    margin: 3px;
+    padding: 6px;
+}
+
+.white {
+    background-color: #8b96d5;
+}
+
+.white:hover {
+    cursor: pointer;
+    background-color: #818edc;
+}
+
+.disableWhite {
+    background-color: #a6aed2;
+}
+
+.disableWhite:hover {
+    cursor: not-allowed;
+    background-color: #a6aed2;
+}
+
+.dark {
+    background-color: #131338;
+    color: #81c1f3;
+}
+
+.dark:hover {
+    cursor: pointer;
+    background-color: #17171f;
+    color: #abd5f6;
+}
+
+.disableDark {
+    background-color: #2f2f3e;
+    color: #7b97ac;
+}
+
+.disableDark:hover {
+    cursor: not-allowed;
+    background-color: #2f2f3e;
+    color: #7b97ac;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        max-width: 50px;
+    }
+}

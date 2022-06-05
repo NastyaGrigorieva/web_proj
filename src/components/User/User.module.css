@@ -1,0 +1,35 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    font-size: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 27px;
+}
+
+.logo.dark > b:hover {
+    color: #57a8e8;
+    /*text-decoration: underline;*/
+}
+.logo.white > b:hover {
+    color: #3a3737;
+    /*text-decoration: underline;*/
+}
+
+.img {
+    width: 40px;
+}
+
+.dark {
+    color: #81c1f3;
+    text-decoration:none;
+}
+
+.white {
+    color: black;
+    text-decoration:none;
+}

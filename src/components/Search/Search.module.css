@@ -1,0 +1,36 @@
+.wrapper {
+    position: relative;
+    min-width: 150px;
+    max-width: 500px;
+    flex-grow: 5;
+}
+
+.searchInput {
+    width: 100%;
+    font-size: 17px;
+    padding: 5px 10px;
+    flex-grow: 10;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+.searchInput:active {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.searchInput:hover {
+    border: 2px solid #1a549a;
+}
+
+.white {
+    background-color: #ccced7;
+}
+.dark {
+    background-color: #373752;
+    color: #81c1f3;
+}
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 200px;
+    }
+}
