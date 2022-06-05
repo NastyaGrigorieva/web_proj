@@ -1,19 +1,32 @@
-import React, {useEffect, useState} from 'react';
+import { useSelector } from "react-redux";
 
-import {movieService} from "../../services"
-import MovieInfo from "../MovieInfo/MovieInfo";
+import styles from "./MoviesList.module.css";
+import { MoviesListCard } from "../MoviesListCard/MovieListCard";
+import { Loading } from "../Loadin/Loading";
+import { Pagination } from "../Pagination";
+import {ScrollToTopOnMount} from "../../CV/ScrollToTopOnMount/ScrollToTopOnMount";
+import {ScrollToTop} from "../Mobile/ScrollToTop";
 
-const MovieList = () => {
-    const [movies, setMovies] = useState([]);
+export const MoviesList = () => {
+    const { movies, isLoading } = useSelector(({ movies: { movies, isLoading } }) => ({ movies, isLoading }))
 
-    useEffect(() => {
-        movieService.getAll().then(({data}) => setMovies(data))
-    }, [])
+    if (isLoading) {
+        return (<Loading/>)
+    }
+
     return (
-        <div>
-            {movies.map(movie =><MovieInfo key={movie.id} movie={movie}/>)}
+        <div className={styles.wrapper}>
+            {!!movies.length && <Pagination/>}
+            <div className={styles.wrapperList}>
+                <ScrollToTop/>
+                {
+                    movies.length
+                        ? movies.map(movie => <MoviesListCard key={movie.id} item={movie}/>)
+                        : <div><h2>Sorry... Film not found </h2></div>
+                }
+            </div>
+            <ScrollToTopOnMount/>
+            {!!movies.length && <Pagination/>}
         </div>
     );
-};
-
-export default MovieList;
+}

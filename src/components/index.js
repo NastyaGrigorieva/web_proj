@@ -1,9 +1,8 @@
 export * from "./Header/Header";
-export * from "./GenreBadge";
-export * from "./MovieInfo";
-export * from "./MoviesList";
-export * from "./UserInfo";
-export * from "./MoviesListCard";
-export * from "./PosterPreview";
-export * from "./StarsRating"
+export * from "./GenreBadge/GenreBadge";
+export * from "./MovieInfo/MovieInfo";
+export * from "./MoviesList/MovieList";
+export * from "./MoviesListCard/MovieListCard";
+export * from "./PosterPreview/PosterPreview";
+export * from "./StarsRating/StarRating"
 

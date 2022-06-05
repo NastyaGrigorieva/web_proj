@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+
+    margin: 5px 0 7px;
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+
+.genre {
+    border: black solid 1px;
+    margin: 5px 5px;
+    padding: 3px 7px;
+    border-radius: 5px;
+}
